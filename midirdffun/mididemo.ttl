@@ -1,0 +1,307 @@
+# rdf2midi converter seems hardcoded to look for example.org/midi namespace. 
+@prefix mid: <http://example.org/midi/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mid:drumsBassMutedTrumpet a mid:Pattern ;
+    mid:format 1 ;
+    mid:hasTrack mid:bassTrack, mid:trumpetTrack;
+    mid:resolution 480 .
+
+mid:trumpetTrack a mid:Track ;
+    mid:hasEvent <http://example.org/midi/trumpetTrack/event0000>,
+        <http://example.org/midi/trumpetTrack/event0001>,
+        <http://example.org/midi/trumpetTrack/event0002>,
+        <http://example.org/midi/trumpetTrack/event0003>,
+        <http://example.org/midi/trumpetTrack/event0004>,
+        <http://example.org/midi/trumpetTrack/event0005>,
+        <http://example.org/midi/trumpetTrack/event0006>,
+        <http://example.org/midi/trumpetTrack/event0007>,
+        <http://example.org/midi/trumpetTrack/event0008> .
+
+mid:bassTrack a mid:Track ;
+    mid:hasEvent <http://example.org/midi/bassTrack/event0000>,
+        <http://example.org/midi/bassTrack/event0000a>,
+        <http://example.org/midi/bassTrack/event0001>,
+        <http://example.org/midi/bassTrack/event0002>,
+        <http://example.org/midi/bassTrack/event0003>,
+        <http://example.org/midi/bassTrack/event0004>,
+        <http://example.org/midi/bassTrack/event0005>,
+        <http://example.org/midi/bassTrack/event0006>,
+        <http://example.org/midi/bassTrack/event0007>,
+        <http://example.org/midi/bassTrack/event0008>,
+        <http://example.org/midi/bassTrack/event0009>,
+        <http://example.org/midi/bassTrack/event0010>,
+        <http://example.org/midi/bassTrack/event0011>,
+        <http://example.org/midi/bassTrack/event0012>,
+        <http://example.org/midi/bassTrack/event0013>,
+        <http://example.org/midi/bassTrack/event0014>,
+        <http://example.org/midi/bassTrack/event0015>,
+        <http://example.org/midi/bassTrack/event0016>,
+        <http://example.org/midi/bassTrack/event0017>,
+        <http://example.org/midi/bassTrack/event0018>,
+        <http://example.org/midi/bassTrack/event0019>,
+        <http://example.org/midi/bassTrack/event0020>,
+        <http://example.org/midi/bassTrack/event0021>,
+        <http://example.org/midi/bassTrack/event0022>,
+        <http://example.org/midi/bassTrack/event0023>,
+        <http://example.org/midi/bassTrack/event0024>,
+        <http://example.org/midi/bassTrack/event0025>,
+        <http://example.org/midi/bassTrack/event0026>,
+        <http://example.org/midi/bassTrack/event0027>,
+        <http://example.org/midi/bassTrack/event0028>,
+        <http://example.org/midi/bassTrack/event0029>,
+        <http://example.org/midi/bassTrack/event0030>,
+        <http://example.org/midi/bassTrack/event0031>,
+        <http://example.org/midi/bassTrack/event1000> .
+
+<http://example.org/midi/bassTrack/event0000> a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+<http://example.org/midi/bassTrack/event0000a> a mid:SetTempoEvent ;
+    mid:bpm 1.5e+02 ;
+    # changing the bpm doesn't affect the tempo. Lowering the mpqn makes the song faster.
+    mid:mpqn 400000 ;
+    mid:tick 0 .
+
+<http://example.org/midi/bassTrack/event0001> a mid:ControlChangeEvent ;
+    mid:channel 2 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/bassTrack/event0002> a mid:ProgramChangeEvent ;
+    mid:channel 2 ;
+    mid:tick 0 ;
+    # picking the voice: pick number at the following and subtract 1 (e.g. Acoustic Bass is 32, not 33)
+    # https://www.midi.org/specifications/item/gm-level-1-sound-set
+    mid:value 32 .
+
+<http://example.org/midi/bassTrack/event0003> a mid:ControlChangeEvent ;
+    mid:channel 2 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 100 .
+
+<http://example.org/midi/bassTrack/event0004> a mid:ControlChangeEvent ;
+    mid:channel 2 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+<http://example.org/midi/bassTrack/event0005> a mid:ControlChangeEvent ;
+    mid:channel 2 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/bassTrack/event0006> a mid:ControlChangeEvent ;
+    mid:channel 2 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/bassTrack/event0007> a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+<http://example.org/midi/bassTrack/event0008> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 28 ;
+    mid:tick 0 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/bassTrack/event0009> a mid:ControlChangeEvent ;
+    mid:channel 3 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/bassTrack/event0010> a mid:ProgramChangeEvent ;
+    mid:channel 3 ;
+    mid:tick 0 ;
+    mid:value 43 .
+
+<http://example.org/midi/bassTrack/event0011> a mid:ControlChangeEvent ;
+    mid:channel 3 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 100 .
+
+<http://example.org/midi/bassTrack/event0012> a mid:ControlChangeEvent ;
+    mid:channel 3 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+<http://example.org/midi/bassTrack/event0013> a mid:ControlChangeEvent ;
+    mid:channel 3 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/bassTrack/event0014> a mid:ControlChangeEvent ;
+    mid:channel 3 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/bassTrack/event0015> a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+<http://example.org/midi/bassTrack/event0016> a mid:ControlChangeEvent ;
+    mid:channel 4 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/bassTrack/event0017> a mid:ProgramChangeEvent ;
+    mid:channel 4 ;
+    mid:tick 0 ;
+    mid:value 44 .
+
+<http://example.org/midi/bassTrack/event0018> a mid:ControlChangeEvent ;
+    mid:channel 4 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 100 .
+
+<http://example.org/midi/bassTrack/event0019> a mid:ControlChangeEvent ;
+    mid:channel 4 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+<http://example.org/midi/bassTrack/event0020> a mid:ControlChangeEvent ;
+    mid:channel 4 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/bassTrack/event0021> a mid:ControlChangeEvent ;
+    mid:channel 4 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/bassTrack/event0022> a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+<http://example.org/midi/bassTrack/event0023> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 28 ;
+    mid:tick 479 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/bassTrack/event0024> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 52 ;
+    mid:tick 1 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/bassTrack/event0025> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 52 ;
+    mid:tick 479 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/bassTrack/event0026> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 50 ;
+    mid:tick 1 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/bassTrack/event0027> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 50 ;
+    mid:tick 479 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/bassTrack/event0028> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 48 ;
+    mid:tick 1 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/bassTrack/event0029> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 48 ;
+    mid:tick 479 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/bassTrack/event0030> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 47 ;
+    mid:tick 1 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/bassTrack/event0031> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 47 ;
+    mid:tick 479 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/bassTrack/event1000> a mid:EndOfTrackEvent ;
+    mid:data "[]" ;
+    mid:tick 1 .
+
+############## trumpet events ############
+
+<http://example.org/midi/trumpetTrack/event0000> a mid:ProgramChangeEvent ;
+    mid:channel 2 ;
+    mid:tick 0 ;
+    mid:value 59 .  # muted trumpet
+
+<http://example.org/midi/trumpetTrack/event0001> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 52 ;
+    mid:tick 1 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/trumpetTrack/event0002> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 52 ;
+    mid:tick 479 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/trumpetTrack/event0003> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 54 ;
+    mid:tick 1 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/trumpetTrack/event0004> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 54 ;
+    mid:tick 479 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/trumpetTrack/event0005> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 56 ;
+    mid:tick 1 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/trumpetTrack/event0006> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 56 ;
+    mid:tick 479 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/trumpetTrack/event0007> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 58 ;
+    mid:tick 1 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/trumpetTrack/event0008> a mid:NoteOnEvent ;
+    mid:channel 2 ;
+    mid:pitch 58 ;
+    mid:tick 479 ;
+    mid:velocity 0 .

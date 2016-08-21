@@ -1,0 +1,217 @@
+@prefix mid: <http://example.org/midi/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix p1: <http://example.org/midi/pianoHeadertrack00/> .
+@prefix p2: <http://example.org/midi/pianoHeadertrack01/> .
+
+mid:pianoHeader a mid:Pattern ;
+    mid:format 1 ;
+    mid:hasTrack mid:pianoHeadertrack00,
+        mid:pianoHeadertrack01 ;
+    mid:resolution 480 .
+
+mid:pianoHeadertrack00 a mid:Track ;
+    mid:hasEvent p1:event0000,
+        p1:event0001,
+        p1:event0002,
+        p1:event0003,
+        p1:event0004,
+        p1:event0005,
+        p1:event0006,
+        p1:event0007,
+        p1:event0008,
+        p1:event0009,
+        p1:event0010,
+        p1:event0011,
+        p1:event0012,
+        p1:event0013,
+        p1:event0014 .
+
+p1:event0000 a mid:TimeSignatureEvent ;
+    mid:denominator 4 ;
+    mid:metronome 24 ;
+    mid:numerator 4 ;
+    mid:thirtyseconds 8 ;
+    mid:tick 0 .
+
+p1:event0001 a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+p1:event0002 a mid:SetTempoEvent ;
+    mid:bpm 1.2e+02 ;
+    mid:mpqn 500000 ;
+    mid:tick 0 .
+
+p1:event0003 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0004 a mid:ProgramChangeEvent ;
+    mid:channel 0 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0005 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 100 .
+
+p1:event0006 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+p1:event0007 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0008 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0009 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+p1:event0010 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 57 ;
+    mid:tick 480 ;
+    mid:velocity 80 .
+
+p1:event0011 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 57 ;
+    mid:tick 455 ;
+    mid:velocity 0 .
+
+p1:event0012 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 86 ;
+    mid:tick 505 ;
+    mid:velocity 80 .
+
+p1:event0013 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 86 ;
+    mid:tick 455 ;
+    mid:velocity 0 .
+
+p1:event0014 a mid:EndOfTrackEvent ;
+    mid:data "[]" ;
+    mid:tick 1 .
+
+mid:pianoHeadertrack01 a mid:Track ;
+    mid:hasEvent p2:event0000,
+        p2:event0001,
+        p2:event0002,
+        p2:event0003,
+        p2:event0004,
+        p2:event0005,
+        p2:event0006,
+        p2:event0007,
+        p2:event0008,
+        p2:event0009,
+        p2:event0010,
+        p2:event0011,
+        p2:event0012,
+        p2:event0013,
+        p2:event0014 .
+
+p2:event0000 a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+p2:event0001 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+p2:event0002 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 40 ;
+    mid:tick 0 ;
+    mid:velocity 80 .
+
+p2:event0003 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 40 ;
+    mid:tick 455 ;
+    mid:velocity 0 .
+
+p2:event0004 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 505 ;
+    mid:velocity 80 .
+
+p2:event0005 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 911 ;
+    mid:velocity 0 .
+
+p2:event0006 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 49 ;
+    mid:velocity 80 .
+
+p2:event0007 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 455 ;
+    mid:velocity 0 .
+
+p2:event0008 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 59 ;
+    mid:tick 25 ;
+    mid:velocity 80 .
+
+p2:event0009 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 59 ;
+    mid:tick 455 ;
+    mid:velocity 0 .
+
+p2:event0010 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 57 ;
+    mid:tick 25 ;
+    mid:velocity 80 .
+
+p2:event0011 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 57 ;
+    mid:tick 455 ;
+    mid:velocity 0 .
+
+p2:event0012 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 55 ;
+    mid:tick 25 ;
+    mid:velocity 80 .
+
+p2:event0013 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 55 ;
+    mid:tick 455 ;
+    mid:velocity 0 .
+
+p2:event0014 a mid:EndOfTrackEvent ;
+    mid:data "[]" ;
+    mid:tick 1 .
+

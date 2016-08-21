@@ -1,0 +1,1817 @@
+# wholeTonePiano.ttl appends notes to a copy of this file to generate fake bebop.
+
+@prefix mid: <http://example.org/midi/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix p1: <http://example.org/midi/pianoHeadertrack00/> .
+@prefix p2: <http://example.org/midi/pianoHeadertrack01/> .
+
+mid:pianoHeader a mid:Pattern ;
+    mid:format 1 ;
+    mid:hasTrack mid:pianoHeadertrack00,
+        mid:pianoHeadertrack01 ;
+    mid:resolution 480 .
+
+p1:event0000 a mid:TimeSignatureEvent ;
+    mid:denominator 4 ;
+    mid:metronome 24 ;
+    mid:numerator 4 ;
+    mid:thirtyseconds 8 ;
+    mid:tick 0 .
+
+p1:event0001 a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+p1:event0002 a mid:SetTempoEvent ;
+    mid:bpm 1.2e+02 ;
+    mid:mpqn 500000 ;
+    mid:tick 0 .
+
+p1:event0003 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0004 a mid:ProgramChangeEvent ;
+    mid:channel 0 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0005 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 100 .
+
+p1:event0006 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+p1:event0007 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0008 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0009 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+p2:event0000 a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+p2:event0001 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+
+p1:event0010 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 540 ;
+    mid:velocity 80 .
+
+p1:event0011 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 180 ;
+    mid:velocity 0 .
+
+
+p1:event0012 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 70 ;
+    mid:tick 750 ;
+    mid:velocity 80 .
+
+p1:event0013 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 70 ;
+    mid:tick 840 ;
+    mid:velocity 0 .
+
+
+p1:event0014 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 76 ;
+    mid:tick 650 ;
+    mid:velocity 80 .
+
+p1:event0015 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 76 ;
+    mid:tick 550 ;
+    mid:velocity 0 .
+
+
+p1:event0016 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 74 ;
+    mid:tick 810 ;
+    mid:velocity 80 .
+
+p1:event0017 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 74 ;
+    mid:tick 650 ;
+    mid:velocity 0 .
+
+
+p1:event0018 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 390 ;
+    mid:velocity 80 .
+
+p1:event0019 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 650 ;
+    mid:velocity 0 .
+
+
+p1:event0020 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 670 ;
+    mid:velocity 80 .
+
+p1:event0021 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 620 ;
+    mid:velocity 0 .
+
+
+p1:event0022 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 76 ;
+    mid:tick 580 ;
+    mid:velocity 80 .
+
+p1:event0023 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 76 ;
+    mid:tick 690 ;
+    mid:velocity 0 .
+
+
+p1:event0024 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 480 ;
+    mid:velocity 80 .
+
+p1:event0025 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 350 ;
+    mid:velocity 0 .
+
+
+p1:event0026 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 600 ;
+    mid:velocity 80 .
+
+p1:event0027 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 220 ;
+    mid:velocity 0 .
+
+
+p1:event0028 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 280 ;
+    mid:velocity 80 .
+
+p1:event0029 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 260 ;
+    mid:velocity 0 .
+
+
+p1:event0030 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 440 ;
+    mid:velocity 80 .
+
+p1:event0031 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 610 ;
+    mid:velocity 0 .
+
+
+p1:event0032 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 260 ;
+    mid:velocity 80 .
+
+p1:event0033 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 350 ;
+    mid:velocity 0 .
+
+
+p1:event0034 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 160 ;
+    mid:velocity 80 .
+
+p1:event0035 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 240 ;
+    mid:velocity 0 .
+
+
+p1:event0036 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 56 ;
+    mid:tick 850 ;
+    mid:velocity 80 .
+
+p1:event0037 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 56 ;
+    mid:tick 440 ;
+    mid:velocity 0 .
+
+
+p1:event0038 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 230 ;
+    mid:velocity 80 .
+
+p1:event0039 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 460 ;
+    mid:velocity 0 .
+
+
+p1:event0040 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 760 ;
+    mid:velocity 80 .
+
+p1:event0041 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 760 ;
+    mid:velocity 0 .
+
+
+p1:event0042 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 670 ;
+    mid:velocity 80 .
+
+p1:event0043 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 210 ;
+    mid:velocity 0 .
+
+
+p1:event0044 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 460 ;
+    mid:velocity 80 .
+
+p1:event0045 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 390 ;
+    mid:velocity 0 .
+
+
+p1:event0046 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 130 ;
+    mid:velocity 80 .
+
+p1:event0047 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 400 ;
+    mid:velocity 0 .
+
+
+p1:event0048 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 660 ;
+    mid:velocity 80 .
+
+p1:event0049 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 740 ;
+    mid:velocity 0 .
+
+
+p1:event0050 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 740 ;
+    mid:velocity 80 .
+
+p1:event0051 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 130 ;
+    mid:velocity 0 .
+
+
+p1:event0052 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 170 ;
+    mid:velocity 80 .
+
+p1:event0053 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 320 ;
+    mid:velocity 0 .
+
+
+p1:event0054 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 480 ;
+    mid:velocity 80 .
+
+p1:event0055 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 250 ;
+    mid:velocity 0 .
+
+
+p1:event0056 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 160 ;
+    mid:velocity 80 .
+
+p1:event0057 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 390 ;
+    mid:velocity 0 .
+
+
+p1:event0058 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 160 ;
+    mid:velocity 80 .
+
+p1:event0059 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 550 ;
+    mid:velocity 0 .
+
+
+p1:event0060 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 210 ;
+    mid:velocity 80 .
+
+p1:event0061 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 560 ;
+    mid:velocity 0 .
+
+
+p1:event0062 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 400 ;
+    mid:velocity 80 .
+
+p1:event0063 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 100 ;
+    mid:velocity 0 .
+
+
+p1:event0064 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 500 ;
+    mid:velocity 80 .
+
+p1:event0065 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 560 ;
+    mid:velocity 0 .
+
+
+p1:event0066 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 350 ;
+    mid:velocity 80 .
+
+p1:event0067 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 830 ;
+    mid:velocity 0 .
+
+
+p1:event0068 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 110 ;
+    mid:velocity 80 .
+
+p1:event0069 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 740 ;
+    mid:velocity 0 .
+
+
+p1:event0070 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 100 ;
+    mid:velocity 80 .
+
+p1:event0071 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 480 ;
+    mid:velocity 0 .
+
+
+p1:event0072 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 290 ;
+    mid:velocity 80 .
+
+p1:event0073 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 810 ;
+    mid:velocity 0 .
+
+
+p1:event0074 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 600 ;
+    mid:velocity 80 .
+
+p1:event0075 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 510 ;
+    mid:velocity 0 .
+
+
+p1:event0076 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 230 ;
+    mid:velocity 80 .
+
+p1:event0077 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 550 ;
+    mid:velocity 0 .
+
+
+p1:event0078 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 850 ;
+    mid:velocity 80 .
+
+p1:event0079 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 300 ;
+    mid:velocity 0 .
+
+
+p1:event0080 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 330 ;
+    mid:velocity 80 .
+
+p1:event0081 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 240 ;
+    mid:velocity 0 .
+
+
+p1:event0082 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 250 ;
+    mid:velocity 80 .
+
+p1:event0083 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 360 ;
+    mid:velocity 0 .
+
+
+p1:event0084 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 220 ;
+    mid:velocity 80 .
+
+p1:event0085 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 290 ;
+    mid:velocity 0 .
+
+
+p1:event0086 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 74 ;
+    mid:tick 480 ;
+    mid:velocity 80 .
+
+p1:event0087 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 74 ;
+    mid:tick 140 ;
+    mid:velocity 0 .
+
+
+p1:event0088 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 70 ;
+    mid:tick 480 ;
+    mid:velocity 80 .
+
+p1:event0089 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 70 ;
+    mid:tick 520 ;
+    mid:velocity 0 .
+
+
+p1:event0090 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 760 ;
+    mid:velocity 80 .
+
+p1:event0091 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 550 ;
+    mid:velocity 0 .
+
+
+p1:event0092 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 330 ;
+    mid:velocity 80 .
+
+p1:event0093 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 610 ;
+    mid:velocity 0 .
+
+
+p1:event0094 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 74 ;
+    mid:tick 150 ;
+    mid:velocity 80 .
+
+p1:event0095 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 74 ;
+    mid:tick 410 ;
+    mid:velocity 0 .
+
+
+p1:event0096 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 100 ;
+    mid:velocity 80 .
+
+p1:event0097 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 370 ;
+    mid:velocity 0 .
+
+
+p1:event0098 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 800 ;
+    mid:velocity 80 .
+
+p1:event0099 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 490 ;
+    mid:velocity 0 .
+
+
+p1:event0100 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 70 ;
+    mid:tick 370 ;
+    mid:velocity 80 .
+
+p1:event0101 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 70 ;
+    mid:tick 510 ;
+    mid:velocity 0 .
+
+
+p1:event0102 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 740 ;
+    mid:velocity 80 .
+
+p1:event0103 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 440 ;
+    mid:velocity 0 .
+
+
+p1:event0104 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 76 ;
+    mid:tick 360 ;
+    mid:velocity 80 .
+
+p1:event0105 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 76 ;
+    mid:tick 570 ;
+    mid:velocity 0 .
+
+
+p1:event0106 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 370 ;
+    mid:velocity 80 .
+
+p1:event0107 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 490 ;
+    mid:velocity 0 .
+
+
+p1:event0108 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 70 ;
+    mid:tick 200 ;
+    mid:velocity 80 .
+
+p1:event0109 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 70 ;
+    mid:tick 430 ;
+    mid:velocity 0 .
+
+
+p1:event0110 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 600 ;
+    mid:velocity 80 .
+
+p1:event0111 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 550 ;
+    mid:velocity 0 .
+
+
+p1:event0112 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 80 ;
+    mid:tick 180 ;
+    mid:velocity 80 .
+
+p1:event0113 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 80 ;
+    mid:tick 420 ;
+    mid:velocity 0 .
+
+
+p1:event0114 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 590 ;
+    mid:velocity 80 .
+
+p1:event0115 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 360 ;
+    mid:velocity 0 .
+
+
+p1:event0116 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 76 ;
+    mid:tick 190 ;
+    mid:velocity 80 .
+
+p1:event0117 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 76 ;
+    mid:tick 550 ;
+    mid:velocity 0 .
+
+
+p1:event0118 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 76 ;
+    mid:tick 770 ;
+    mid:velocity 80 .
+
+p1:event0119 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 76 ;
+    mid:tick 360 ;
+    mid:velocity 0 .
+
+
+p1:event0120 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 520 ;
+    mid:velocity 80 .
+
+p1:event0121 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 72 ;
+    mid:tick 470 ;
+    mid:velocity 0 .
+
+
+p1:event0122 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 410 ;
+    mid:velocity 80 .
+
+p1:event0123 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 360 ;
+    mid:velocity 0 .
+
+
+p1:event0124 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 290 ;
+    mid:velocity 80 .
+
+p1:event0125 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 300 ;
+    mid:velocity 0 .
+
+
+p1:event0126 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 390 ;
+    mid:velocity 80 .
+
+p1:event0127 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 250 ;
+    mid:velocity 0 .
+
+p1:event0128 a mid:EndOfTrackEvent ;
+    mid:data "[]" ;
+    mid:tick 1 .
+
+mid:pianoHeadertrack00 a mid:Track ;
+    mid:hasEvent p1:event0000,
+        p1:event0001,
+        p1:event0002,
+        p1:event0003,
+        p1:event0004,
+        p1:event0005,
+        p1:event0006,
+        p1:event0007,
+        p1:event0008,
+        p1:event0009
+,
+p1:event0010,
+p1:event0011,
+p1:event0012,
+p1:event0013,
+p1:event0014,
+p1:event0015,
+p1:event0016,
+p1:event0017,
+p1:event0018,
+p1:event0019,
+p1:event0020,
+p1:event0021,
+p1:event0022,
+p1:event0023,
+p1:event0024,
+p1:event0025,
+p1:event0026,
+p1:event0027,
+p1:event0028,
+p1:event0029,
+p1:event0030,
+p1:event0031,
+p1:event0032,
+p1:event0033,
+p1:event0034,
+p1:event0035,
+p1:event0036,
+p1:event0037,
+p1:event0038,
+p1:event0039,
+p1:event0040,
+p1:event0041,
+p1:event0042,
+p1:event0043,
+p1:event0044,
+p1:event0045,
+p1:event0046,
+p1:event0047,
+p1:event0048,
+p1:event0049,
+p1:event0050,
+p1:event0051,
+p1:event0052,
+p1:event0053,
+p1:event0054,
+p1:event0055,
+p1:event0056,
+p1:event0057,
+p1:event0058,
+p1:event0059,
+p1:event0060,
+p1:event0061,
+p1:event0062,
+p1:event0063,
+p1:event0064,
+p1:event0065,
+p1:event0066,
+p1:event0067,
+p1:event0068,
+p1:event0069,
+p1:event0070,
+p1:event0071,
+p1:event0072,
+p1:event0073,
+p1:event0074,
+p1:event0075,
+p1:event0076,
+p1:event0077,
+p1:event0078,
+p1:event0079,
+p1:event0080,
+p1:event0081,
+p1:event0082,
+p1:event0083,
+p1:event0084,
+p1:event0085,
+p1:event0086,
+p1:event0087,
+p1:event0088,
+p1:event0089,
+p1:event0090,
+p1:event0091,
+p1:event0092,
+p1:event0093,
+p1:event0094,
+p1:event0095,
+p1:event0096,
+p1:event0097,
+p1:event0098,
+p1:event0099,
+p1:event0100,
+p1:event0101,
+p1:event0102,
+p1:event0103,
+p1:event0104,
+p1:event0105,
+p1:event0106,
+p1:event0107,
+p1:event0108,
+p1:event0109,
+p1:event0110,
+p1:event0111,
+p1:event0112,
+p1:event0113,
+p1:event0114,
+p1:event0115,
+p1:event0116,
+p1:event0117,
+p1:event0118,
+p1:event0119,
+p1:event0120,
+p1:event0121,
+p1:event0122,
+p1:event0123,
+p1:event0124,
+p1:event0125,
+p1:event0126,
+p1:event0127,
+p1:event0128 .
+
+p2:event0002 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 170 ;
+    mid:velocity 80 .
+
+p2:event0003 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 420 ;
+    mid:velocity 0 .
+
+
+p2:event0004 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 470 ;
+    mid:velocity 80 .
+
+p2:event0005 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 730 ;
+    mid:velocity 0 .
+
+
+p2:event0006 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 490 ;
+    mid:velocity 80 .
+
+p2:event0007 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 180 ;
+    mid:velocity 0 .
+
+
+p2:event0008 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 730 ;
+    mid:velocity 80 .
+
+p2:event0009 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 110 ;
+    mid:velocity 0 .
+
+
+p2:event0010 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 760 ;
+    mid:velocity 80 .
+
+p2:event0011 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 390 ;
+    mid:velocity 0 .
+
+
+p2:event0012 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 48 ;
+    mid:tick 610 ;
+    mid:velocity 80 .
+
+p2:event0013 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 48 ;
+    mid:tick 750 ;
+    mid:velocity 0 .
+
+
+p2:event0014 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 520 ;
+    mid:velocity 80 .
+
+p2:event0015 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 670 ;
+    mid:velocity 0 .
+
+
+p2:event0016 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 56 ;
+    mid:tick 550 ;
+    mid:velocity 80 .
+
+p2:event0017 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 56 ;
+    mid:tick 390 ;
+    mid:velocity 0 .
+
+
+p2:event0018 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 350 ;
+    mid:velocity 80 .
+
+p2:event0019 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 60 ;
+    mid:tick 340 ;
+    mid:velocity 0 .
+
+
+p2:event0020 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 560 ;
+    mid:velocity 80 .
+
+p2:event0021 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 740 ;
+    mid:velocity 0 .
+
+
+p2:event0022 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 48 ;
+    mid:tick 250 ;
+    mid:velocity 80 .
+
+p2:event0023 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 48 ;
+    mid:tick 150 ;
+    mid:velocity 0 .
+
+
+p2:event0024 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 110 ;
+    mid:velocity 80 .
+
+p2:event0025 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 490 ;
+    mid:velocity 0 .
+
+
+p2:event0026 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 48 ;
+    mid:tick 320 ;
+    mid:velocity 80 .
+
+p2:event0027 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 48 ;
+    mid:tick 800 ;
+    mid:velocity 0 .
+
+
+p2:event0028 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 750 ;
+    mid:velocity 80 .
+
+p2:event0029 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 340 ;
+    mid:velocity 0 .
+
+
+p2:event0030 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 44 ;
+    mid:tick 720 ;
+    mid:velocity 80 .
+
+p2:event0031 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 44 ;
+    mid:tick 200 ;
+    mid:velocity 0 .
+
+
+p2:event0032 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 810 ;
+    mid:velocity 80 .
+
+p2:event0033 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 380 ;
+    mid:velocity 0 .
+
+
+p2:event0034 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 40 ;
+    mid:tick 240 ;
+    mid:velocity 80 .
+
+p2:event0035 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 40 ;
+    mid:tick 450 ;
+    mid:velocity 0 .
+
+
+p2:event0036 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 42 ;
+    mid:tick 320 ;
+    mid:velocity 80 .
+
+p2:event0037 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 42 ;
+    mid:tick 640 ;
+    mid:velocity 0 .
+
+
+p2:event0038 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 50 ;
+    mid:tick 750 ;
+    mid:velocity 80 .
+
+p2:event0039 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 50 ;
+    mid:tick 540 ;
+    mid:velocity 0 .
+
+
+p2:event0040 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 660 ;
+    mid:velocity 80 .
+
+p2:event0041 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 460 ;
+    mid:velocity 0 .
+
+
+p2:event0042 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 48 ;
+    mid:tick 550 ;
+    mid:velocity 80 .
+
+p2:event0043 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 48 ;
+    mid:tick 770 ;
+    mid:velocity 0 .
+
+
+p2:event0044 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 50 ;
+    mid:tick 490 ;
+    mid:velocity 80 .
+
+p2:event0045 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 50 ;
+    mid:tick 300 ;
+    mid:velocity 0 .
+
+
+p2:event0046 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 42 ;
+    mid:tick 300 ;
+    mid:velocity 80 .
+
+p2:event0047 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 42 ;
+    mid:tick 810 ;
+    mid:velocity 0 .
+
+
+p2:event0048 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 38 ;
+    mid:tick 550 ;
+    mid:velocity 80 .
+
+p2:event0049 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 38 ;
+    mid:tick 310 ;
+    mid:velocity 0 .
+
+
+p2:event0050 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 44 ;
+    mid:tick 350 ;
+    mid:velocity 80 .
+
+p2:event0051 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 44 ;
+    mid:tick 710 ;
+    mid:velocity 0 .
+
+
+p2:event0052 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 50 ;
+    mid:tick 770 ;
+    mid:velocity 80 .
+
+p2:event0053 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 50 ;
+    mid:tick 580 ;
+    mid:velocity 0 .
+
+
+p2:event0054 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 340 ;
+    mid:velocity 80 .
+
+p2:event0055 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 130 ;
+    mid:velocity 0 .
+
+
+p2:event0056 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 100 ;
+    mid:velocity 80 .
+
+p2:event0057 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 630 ;
+    mid:velocity 0 .
+
+
+p2:event0058 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 38 ;
+    mid:tick 680 ;
+    mid:velocity 80 .
+
+p2:event0059 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 38 ;
+    mid:tick 330 ;
+    mid:velocity 0 .
+
+
+p2:event0060 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 42 ;
+    mid:tick 370 ;
+    mid:velocity 80 .
+
+p2:event0061 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 42 ;
+    mid:tick 700 ;
+    mid:velocity 0 .
+
+
+p2:event0062 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 680 ;
+    mid:velocity 80 .
+
+p2:event0063 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 550 ;
+    mid:velocity 0 .
+
+
+p2:event0064 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 590 ;
+    mid:velocity 80 .
+
+p2:event0065 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 110 ;
+    mid:velocity 0 .
+
+
+p2:event0066 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 600 ;
+    mid:velocity 80 .
+
+p2:event0067 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 600 ;
+    mid:velocity 0 .
+
+
+p2:event0068 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 44 ;
+    mid:tick 470 ;
+    mid:velocity 80 .
+
+p2:event0069 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 44 ;
+    mid:tick 470 ;
+    mid:velocity 0 .
+
+
+p2:event0070 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 38 ;
+    mid:tick 580 ;
+    mid:velocity 80 .
+
+p2:event0071 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 38 ;
+    mid:tick 160 ;
+    mid:velocity 0 .
+
+
+p2:event0072 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 38 ;
+    mid:tick 410 ;
+    mid:velocity 80 .
+
+p2:event0073 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 38 ;
+    mid:tick 730 ;
+    mid:velocity 0 .
+
+
+p2:event0074 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 420 ;
+    mid:velocity 80 .
+
+p2:event0075 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 380 ;
+    mid:velocity 0 .
+
+
+p2:event0076 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 790 ;
+    mid:velocity 80 .
+
+p2:event0077 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 800 ;
+    mid:velocity 0 .
+
+
+p2:event0078 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 180 ;
+    mid:velocity 80 .
+
+p2:event0079 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 120 ;
+    mid:velocity 0 .
+
+
+p2:event0080 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 50 ;
+    mid:tick 270 ;
+    mid:velocity 80 .
+
+p2:event0081 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 50 ;
+    mid:tick 190 ;
+    mid:velocity 0 .
+
+
+p2:event0082 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 420 ;
+    mid:velocity 80 .
+
+p2:event0083 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 750 ;
+    mid:velocity 0 .
+
+
+p2:event0084 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 310 ;
+    mid:velocity 80 .
+
+p2:event0085 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 580 ;
+    mid:velocity 0 .
+
+
+p2:event0086 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 50 ;
+    mid:tick 250 ;
+    mid:velocity 80 .
+
+p2:event0087 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 50 ;
+    mid:tick 650 ;
+    mid:velocity 0 .
+
+
+p2:event0088 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 40 ;
+    mid:tick 370 ;
+    mid:velocity 80 .
+
+p2:event0089 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 40 ;
+    mid:tick 760 ;
+    mid:velocity 0 .
+
+
+p2:event0090 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 48 ;
+    mid:tick 190 ;
+    mid:velocity 80 .
+
+p2:event0091 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 48 ;
+    mid:tick 850 ;
+    mid:velocity 0 .
+
+
+p2:event0092 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 360 ;
+    mid:velocity 80 .
+
+p2:event0093 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 46 ;
+    mid:tick 590 ;
+    mid:velocity 0 .
+
+
+p2:event0094 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 580 ;
+    mid:velocity 80 .
+
+p2:event0095 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 490 ;
+    mid:velocity 0 .
+
+
+p2:event0096 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 180 ;
+    mid:velocity 80 .
+
+p2:event0097 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 230 ;
+    mid:velocity 0 .
+
+
+p2:event0098 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 480 ;
+    mid:velocity 80 .
+
+p2:event0099 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 52 ;
+    mid:tick 240 ;
+    mid:velocity 0 .
+
+
+p2:event0100 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 390 ;
+    mid:velocity 80 .
+
+p2:event0101 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 54 ;
+    mid:tick 710 ;
+    mid:velocity 0 .
+
+
+p2:event0102 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 700 ;
+    mid:velocity 80 .
+
+p2:event0103 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 200 ;
+    mid:velocity 0 .
+
+
+p2:event0104 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 220 ;
+    mid:velocity 80 .
+
+p2:event0105 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 62 ;
+    mid:tick 830 ;
+    mid:velocity 0 .
+
+
+p2:event0106 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 360 ;
+    mid:velocity 80 .
+
+p2:event0107 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 68 ;
+    mid:tick 810 ;
+    mid:velocity 0 .
+
+
+p2:event0108 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 710 ;
+    mid:velocity 80 .
+
+p2:event0109 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 66 ;
+    mid:tick 450 ;
+    mid:velocity 0 .
+
+
+p2:event0110 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 730 ;
+    mid:velocity 80 .
+
+p2:event0111 a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 58 ;
+    mid:tick 650 ;
+    mid:velocity 0 .
+
+p2:event0112 a mid:EndOfTrackEvent ;
+    mid:data "[]" ;
+    mid:tick 1 .
+
+mid:pianoHeadertrack01 a mid:Track ;
+    mid:hasEvent p2:event0000,
+        p2:event0001
+,
+p2:event0002,
+p2:event0003,
+p2:event0004,
+p2:event0005,
+p2:event0006,
+p2:event0007,
+p2:event0008,
+p2:event0009,
+p2:event0010,
+p2:event0011,
+p2:event0012,
+p2:event0013,
+p2:event0014,
+p2:event0015,
+p2:event0016,
+p2:event0017,
+p2:event0018,
+p2:event0019,
+p2:event0020,
+p2:event0021,
+p2:event0022,
+p2:event0023,
+p2:event0024,
+p2:event0025,
+p2:event0026,
+p2:event0027,
+p2:event0028,
+p2:event0029,
+p2:event0030,
+p2:event0031,
+p2:event0032,
+p2:event0033,
+p2:event0034,
+p2:event0035,
+p2:event0036,
+p2:event0037,
+p2:event0038,
+p2:event0039,
+p2:event0040,
+p2:event0041,
+p2:event0042,
+p2:event0043,
+p2:event0044,
+p2:event0045,
+p2:event0046,
+p2:event0047,
+p2:event0048,
+p2:event0049,
+p2:event0050,
+p2:event0051,
+p2:event0052,
+p2:event0053,
+p2:event0054,
+p2:event0055,
+p2:event0056,
+p2:event0057,
+p2:event0058,
+p2:event0059,
+p2:event0060,
+p2:event0061,
+p2:event0062,
+p2:event0063,
+p2:event0064,
+p2:event0065,
+p2:event0066,
+p2:event0067,
+p2:event0068,
+p2:event0069,
+p2:event0070,
+p2:event0071,
+p2:event0072,
+p2:event0073,
+p2:event0074,
+p2:event0075,
+p2:event0076,
+p2:event0077,
+p2:event0078,
+p2:event0079,
+p2:event0080,
+p2:event0081,
+p2:event0082,
+p2:event0083,
+p2:event0084,
+p2:event0085,
+p2:event0086,
+p2:event0087,
+p2:event0088,
+p2:event0089,
+p2:event0090,
+p2:event0091,
+p2:event0092,
+p2:event0093,
+p2:event0094,
+p2:event0095,
+p2:event0096,
+p2:event0097,
+p2:event0098,
+p2:event0099,
+p2:event0100,
+p2:event0101,
+p2:event0102,
+p2:event0103,
+p2:event0104,
+p2:event0105,
+p2:event0106,
+p2:event0107,
+p2:event0108,
+p2:event0109,
+p2:event0110,
+p2:event0111,
+p2:event0112 .

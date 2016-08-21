@@ -1,0 +1,159 @@
+@prefix mid: <http://example.org/midi/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mid:pianoheader a mid:Pattern ;
+    mid:format 1 ;
+    mid:hasTrack mid:pianoheadertrack00,
+        mid:pianoheadertrack01 ;
+    mid:resolution 480 .
+
+mid:pianoheadertrack00 a mid:Track ;
+    mid:hasEvent <http://example.org/midi/pianoheadertrack00/event0000>,
+        <http://example.org/midi/pianoheadertrack00/event0001>,
+        <http://example.org/midi/pianoheadertrack00/event0002>,
+        <http://example.org/midi/pianoheadertrack00/event0003>,
+        <http://example.org/midi/pianoheadertrack00/event0004>,
+        <http://example.org/midi/pianoheadertrack00/event0005>,
+        <http://example.org/midi/pianoheadertrack00/event0006>,
+        <http://example.org/midi/pianoheadertrack00/event0007>,
+        <http://example.org/midi/pianoheadertrack00/event0008>,
+        <http://example.org/midi/pianoheadertrack00/event0009>,
+        <http://example.org/midi/pianoheadertrack00/event0010>,
+        <http://example.org/midi/pianoheadertrack00/event0011>,
+        <http://example.org/midi/pianoheadertrack00/event0012>,
+        <http://example.org/midi/pianoheadertrack00/event0013>,
+        <http://example.org/midi/pianoheadertrack00/event0014> .
+
+<http://example.org/midi/pianoheadertrack00/event0000> a mid:TimeSignatureEvent ;
+    mid:denominator 4 ;
+    mid:metronome 24 ;
+    mid:numerator 4 ;
+    mid:thirtyseconds 8 ;
+    mid:tick 0 .
+
+<http://example.org/midi/pianoheadertrack00/event0001> a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+<http://example.org/midi/pianoheadertrack00/event0002> a mid:SetTempoEvent ;
+    mid:bpm 1.2e+02 ;
+    mid:mpqn 500000 ;
+    mid:tick 0 .
+
+<http://example.org/midi/pianoheadertrack00/event0003> a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/pianoheadertrack00/event0004> a mid:ProgramChangeEvent ;
+    mid:channel 0 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/pianoheadertrack00/event0005> a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 100 .
+
+<http://example.org/midi/pianoheadertrack00/event0006> a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+<http://example.org/midi/pianoheadertrack00/event0007> a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/pianoheadertrack00/event0008> a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+<http://example.org/midi/pianoheadertrack00/event0009> a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+<http://example.org/midi/pianoheadertrack00/event0010> a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 57 ;
+    mid:tick 480 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/pianoheadertrack00/event0011> a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 57 ;
+    mid:tick 455 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/pianoheadertrack00/event0012> a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 86 ;
+    mid:tick 505 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/pianoheadertrack00/event0013> a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 86 ;
+    mid:tick 455 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/pianoheadertrack00/event0014> a mid:EndOfTrackEvent ;
+    mid:data "[]" ;
+    mid:tick 1 .
+
+mid:pianoheadertrack01 a mid:Track ;
+    mid:hasEvent <http://example.org/midi/pianoheadertrack01/event0000>,
+        <http://example.org/midi/pianoheadertrack01/event0001>,
+        <http://example.org/midi/pianoheadertrack01/event0002>,
+        <http://example.org/midi/pianoheadertrack01/event0003>,
+        <http://example.org/midi/pianoheadertrack01/event0004>,
+        <http://example.org/midi/pianoheadertrack01/event0005>,
+        <http://example.org/midi/pianoheadertrack01/event0006> .
+
+<http://example.org/midi/pianoheadertrack01/event0000> a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+<http://example.org/midi/pianoheadertrack01/event0001> a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+<http://example.org/midi/pianoheadertrack01/event0002> a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 40 ;
+    mid:tick 0 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/pianoheadertrack01/event0003> a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 40 ;
+    mid:tick 455 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/pianoheadertrack01/event0004> a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 505 ;
+    mid:velocity 80 .
+
+<http://example.org/midi/pianoheadertrack01/event0005> a mid:NoteOnEvent ;
+    mid:channel 0 ;
+    mid:pitch 64 ;
+    mid:tick 455 ;
+    mid:velocity 0 .
+
+<http://example.org/midi/pianoheadertrack01/event0006> a mid:EndOfTrackEvent ;
+    mid:data "[]" ;
+    mid:tick 1 .
+

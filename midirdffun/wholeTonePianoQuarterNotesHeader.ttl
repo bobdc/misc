@@ -1,0 +1,81 @@
+# wholeTonePiano.ttl appends notes to a copy of this file to generate fake bebop.
+
+@prefix mid: <http://example.org/midi/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix p1: <http://example.org/midi/pianoHeadertrack00/> .
+@prefix p2: <http://example.org/midi/pianoHeadertrack01/> .
+
+mid:pianoHeader a mid:Pattern ;
+    mid:format 1 ;
+    mid:hasTrack mid:pianoHeadertrack00,
+        mid:pianoHeadertrack01 ;
+    mid:resolution 480 .
+
+p1:event0000 a mid:TimeSignatureEvent ;
+    mid:denominator 4 ;
+    mid:metronome 24 ;
+    mid:numerator 4 ;
+    mid:thirtyseconds 8 ;
+    mid:tick 0 .
+
+p1:event0001 a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+p1:event0002 a mid:SetTempoEvent ;
+    mid:bpm 1.2e+02 ;
+    mid:mpqn 500000 ;    # tempo. Smaller number means faster music. 
+    mid:tick 0 .
+
+p1:event0003 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0004 a mid:ProgramChangeEvent ;
+    mid:channel 0 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0005 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 100 .
+
+p1:event0006 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+p1:event0007 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0008 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+p1:event0009 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+p2:event0000 a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+p2:event0001 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+

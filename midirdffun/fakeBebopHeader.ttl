@@ -1,0 +1,291 @@
+# fakeBebop.ttl appends notes to a copy of this file to generate fake bebop.
+
+@prefix mid: <http://example.org/midi/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bt: <http://example.org/midi/bassTrack/> .
+@prefix tt: <http://example.org/midi/trumpetTrack/> .
+@prefix dt: <http://example.org/midi/drumsTrack/> .
+
+mid:drumsBassMutedTrumpetHeader a mid:Pattern ;
+    mid:format 1 ;
+    mid:hasTrack mid:trumpetTrack,
+        mid:bassTrack,    
+        mid:drumsTrack ; 
+    mid:resolution 480 .
+
+#### trumpet setup events (16 of them) #############
+        
+tt:event0000 a mid:TimeSignatureEvent ;
+    mid:denominator 4 ;
+    mid:metronome 24 ;
+    mid:numerator 4 ;
+    mid:thirtyseconds 8 ;
+    mid:tick 0 .
+
+tt:event0001 a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+tt:event0002 a mid:SetTempoEvent ;
+    mid:bpm 1.5e+02 ;
+    mid:mpqn 360000 ;
+    mid:tick 0 .
+
+tt:event0003 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+tt:event0004 a mid:ProgramChangeEvent ;
+    mid:channel 0 ;
+    mid:tick 0 ;
+    mid:value 56 .      # 59 = muted trumpet (MIDI value minus 1); 66, tenor; 56, trumpet
+
+tt:event0005 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 127 .
+
+tt:event0006 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+tt:event0007 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+tt:event0008 a mid:ControlChangeEvent ;
+    mid:channel 0 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+tt:event0009 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+tt:event0010 a mid:ControlChangeEvent ;
+    mid:channel 1 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+tt:event0011 a mid:ProgramChangeEvent ;
+    mid:channel 1 ;
+    mid:tick 0 ;
+    mid:value 59 .
+
+tt:event0012 a mid:ControlChangeEvent ;
+    mid:channel 1 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 127 .
+
+tt:event0013 a mid:ControlChangeEvent ;
+    mid:channel 1 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+tt:event0014 a mid:ControlChangeEvent ;
+    mid:channel 1 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+tt:event0015 a mid:ControlChangeEvent ;
+    mid:channel 1 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+tt:event0016 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+dt:event0000 a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+dt:event0001 a mid:ControlChangeEvent ;
+    mid:channel 9 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+dt:event0002 a mid:ProgramChangeEvent ;
+    mid:channel 9 ;
+    mid:tick 0 ;
+    mid:value 8 .
+
+dt:event0003 a mid:ControlChangeEvent ;
+    mid:channel 9 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 95 .
+
+dt:event0004 a mid:ControlChangeEvent ;
+    mid:channel 9 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+dt:event0005 a mid:ControlChangeEvent ;
+    mid:channel 9 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 1 .
+
+dt:event0006 a mid:ControlChangeEvent ;
+    mid:channel 9 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+dt:event0007 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+dt:event0008 a mid:NoteOnEvent ;
+    mid:channel 9 ;
+    mid:pitch 57 ;
+    mid:tick 0 ;
+    mid:velocity 80 .
+
+
+
+##### bass setup events (21 of them) ##########
+
+    bt:event0000 a mid:KeySignatureEvent ;
+    mid:alternatives 0 ;
+    mid:minor 0 ;
+    mid:tick 0 .
+
+bt:event0001 a mid:ControlChangeEvent ;
+    mid:channel 2 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+bt:event0002 a mid:ProgramChangeEvent ;
+    mid:channel 2 ;
+    mid:tick 0 ;
+    mid:value 32 .
+
+bt:event0003 a mid:ControlChangeEvent ;
+    mid:channel 2 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 100 .
+
+bt:event0004 a mid:ControlChangeEvent ;
+    mid:channel 2 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+bt:event0005 a mid:ControlChangeEvent ;
+    mid:channel 2 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+bt:event0006 a mid:ControlChangeEvent ;
+    mid:channel 2 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+bt:event0007 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+bt:event0008 a mid:ControlChangeEvent ;
+    mid:channel 3 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+bt:event0009 a mid:ProgramChangeEvent ;
+    mid:channel 3 ;
+    mid:tick 0 ;
+    mid:value 43 .
+
+bt:event0010 a mid:ControlChangeEvent ;
+    mid:channel 3 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 100 .
+
+bt:event0011 a mid:ControlChangeEvent ;
+    mid:channel 3 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+bt:event0012 a mid:ControlChangeEvent ;
+    mid:channel 3 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+bt:event0013 a mid:ControlChangeEvent ;
+    mid:channel 3 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+bt:event0014 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
+bt:event0015 a mid:ControlChangeEvent ;
+    mid:channel 4 ;
+    mid:control 121 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+bt:event0016 a mid:ProgramChangeEvent ;
+    mid:channel 4 ;
+    mid:tick 0 ;
+    mid:value 44 .
+
+bt:event0017 a mid:ControlChangeEvent ;
+    mid:channel 4 ;
+    mid:control 7 ;
+    mid:tick 0 ;
+    mid:value 100 .
+
+bt:event0018 a mid:ControlChangeEvent ;
+    mid:channel 4 ;
+    mid:control 10 ;
+    mid:tick 0 ;
+    mid:value 64 .
+
+bt:event0019 a mid:ControlChangeEvent ;
+    mid:channel 4 ;
+    mid:control 91 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+bt:event0020 a mid:ControlChangeEvent ;
+    mid:channel 4 ;
+    mid:control 93 ;
+    mid:tick 0 ;
+    mid:value 0 .
+
+bt:event0021 a mid:PortEvent ;
+    mid:data "[0]" ;
+    mid:tick 0 .
+
