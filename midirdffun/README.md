@@ -1,0 +1,1 @@
+These are all just experiments that I did for fun while on vacation at a summer beach house, so don't look for well-organized, modular code here. 
