@@ -1,0 +1,10 @@
+# Run this with the RDF version of the cookies table from
+# ~/.config/google-chrome/Default/Cookies
+
+PREFIX m: <http://learningsparql/sqlite/model#> 
+
+SELECT ?host_key (COUNT(?host_key) AS ?cookies)  WHERE {
+  ?cookie m:host_key ?host_key .
+}
+GROUP BY ?host_key
+ORDER BY DESC(?cookies)

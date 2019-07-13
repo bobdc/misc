@@ -1,0 +1,9 @@
+# Run this with the RDF version of the moz_cookies table fromFirefox's cookies.sqlite  file
+
+PREFIX m: <http://learningsparql/sqlite/model#> 
+
+SELECT ?baseDomain (COUNT(?baseDomain) AS ?cookies)  WHERE {
+  ?cookie m:baseDomain ?baseDomain .
+}
+GROUP BY ?baseDomain
+ORDER BY DESC(?cookies)
