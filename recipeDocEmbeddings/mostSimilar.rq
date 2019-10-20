@@ -1,0 +1,11 @@
+PREFIX m: <http://learningsparql.com/model#> 
+PREFIX dc: <http://purl.org/dc/elements/1.1/> 
+
+SELECT ?score ?title1 ?title2 WHERE {
+                      ?comparison m:doc ?recipe1, ?recipe2;
+  m:recipeCosineSim ?score .
+  ?recipe1 dc:title ?title1 .
+  ?recipe2 dc:title ?title2 .
+  FILTER (?recipe1 != ?recipe2)
+}
+ORDER BY ?score

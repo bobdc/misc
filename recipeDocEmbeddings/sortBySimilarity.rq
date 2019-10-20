@@ -1,0 +1,19 @@
+# arq --query sortBySimilarity.rq --data a-zNansRemoved.ttl --results=TSV > sortBySimilarity.tsv
+
+PREFIX m: <http://learningsparql.com/model#> 
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>	
+
+# A comparison object looks like this:
+#[ m:doc <https://en.wikibooks.org/wiki/Cookbook:Apple_Raisin_Oat_Muffins>, <https://en.wikibooks.org/wiki/Cookbook:Adobo> ; m:recipeCosineSim 0.8590696 ] .
+
+SELECT ?score ?doc1URL ?doc1title ?doc2URL ?doc2title WHERE {
+# when the two "URL" parts were missing from the next line, I got a
+# cross product. I should reproduce on a smaller scale and blog that as a common SPARQL problem. 
+   ?comparison m:doc ?doc1URL, ?doc2URL; m:recipeCosineSim ?score .
+   ?doc1URL dc:title ?doc1title .
+   ?doc2URL dc:title ?doc2title .
+   FILTER(?doc1URL != ?doc2URL)
+   FILTER(?score > .975)   # .92: 189970 lines; .95: 76866; .97: 8562; .98: 544; .975: 2604
+}
+ORDER BY ?doc1title desc(?score)
