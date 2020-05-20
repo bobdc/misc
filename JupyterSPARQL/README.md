@@ -1,2 +1,2 @@
 # Jupyter SPARQL Fun
-The blog entry [SPARQL in a Jupyter (a.k.a. IPython) notebook](http://www.snee.com/bobdc.blog/2016/07/sparql-in-a-jupyter-aka-ipytho.html) describes the Jupyter notebook in this directory.
+The blog entry [SPARQL in a Jupyter (a.k.a. IPython) notebook](http://www.bobdc.com/blog/sparql-in-a-jupyter-aka-ipytho/) describes the JupyterSPARQLFun Jupyter notebook in this directory.
