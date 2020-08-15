@@ -1,0 +1,104 @@
+<modsCollection xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd">
+
+  {{ range $docId, $values := . }}  <!-- For each map of document metadata passed in here... -->
+
+  <mods version="3.3">
+
+    <!-- Pull arrays of values (arrays because most can be multi-valued)
+	 from the passed data. Note that following values may or may not be
+	 there. There is logic further down to test for that. -->
+    
+    {{$nameArray         := index . "http://id.loc.gov/vocabulary/relators/aut"}}
+    {{$resourceTypeArray := index . "http://purl.org/dc/terms/type"}}
+    {{$abstractArray     := index . "http://purl.org/dc/terms/abstract"}}
+    {{$genreArray        := index . "http://www.europeana.eu/schemas/edm/hasType"}}
+    {{$placeArray        := index . "http://id.loc.gov/vocabulary/relators/pup"}}
+    {{$publisherArray    := index . "http://id.loc.gov/vocabulary/relators/pbl"}}
+    {{$dateIssuedArray   := index . "http://purl.org/dc/terms/issued"}}
+    {{$languageArray     := index . "http://purl.org/dc/terms/language"}}
+    {{$formArray         := index . "http://www.europeana.eu/schemas/edm/hasType"}}
+    {{$extentArray       := index . "http://rdaregistry.info/Elements/u/#extent.en"}}
+
+    <identifier type="uri">{{$docId}}</identifier>
+
+    
+    <titleInfo>
+      <title>{{index . "http://purl.org/dc/terms/title" 0}}</title>
+    </titleInfo>
+
+    <!-- everything else is optional -->
+
+    <!-- If there is an array with values for this property... -->
+    {{if $nameArray}}
+    <name type="personal">
+      <!-- Just assume it's the first item of the array and ignore the rest. -->
+      <namePart>{{index $nameArray 0}}</namePart>
+    </name>
+    {{end}}
+    
+    {{if $resourceTypeArray}} <!-- If this exists -->
+    {{$resourceType := index $resourceTypeArray 0}}
+    <!-- Not outputting the stored value but something calculated from
+	 that in the template logic. Note that eq is a prefix operator. -->
+    {{if eq $resourceType "http://id.loc.gov/vocabulary/resourceTypes/txt"}}
+    <typeOfResource>text</typeOfResource>
+    {{end}}
+    {{end}}
+
+    {{if $genreArray}} <!-- see notes with $resourceTypeArray -->
+    {{$genre := index $genreArray 0}}
+    {{if eq $genre "http://id.loc.gov/vocabulary/marcgt/jou"}}
+    <genre>journal article</genre>
+    {{end}} 
+    {{end}}
+
+    <!-- originInfo needs to have at least one child element. -->
+    {{if or $placeArray $publisherArray $dateIssuedArray}}
+    <originInfo>
+      {{if $placeArray}}
+      <place>
+	<placeTerm>{{index $placeArray 0}}</placeTerm>
+      </place>
+      {{end}}
+      {{if $publisherArray}}
+      <publisher>{{index $publisherArray 0}}</publisher>
+      {{end}}
+      {{if $dateIssuedArray}}
+      <dateIssued>{{index $dateIssuedArray 0}}</dateIssued>
+      {{end}}
+    </originInfo>
+    {{end}}  <!-- of "if or $placeArray..." -->
+
+    {{if $languageArray}}  <!-- see notes with $resourceTypeArray -->
+    {{$language := index $languageArray 0}}
+    {{if eq $language "http://id.loc.gov/vocabulary/iso639-2/eng"}}
+    <!-- Production version of this would allow for other languages. -->
+    <language>
+      <languageTerm authority="iso639-2b">eng</languageTerm>
+    </language>
+    {{end}}
+    {{end}}
+
+    {{if $extentArray}}
+    <physicalDescription>
+      <extent>{{index $extentArray 0}}</extent>
+    </physicalDescription>
+    {{end}}
+
+    {{if $abstractArray}}
+    <abstract>{{index $abstractArray 0}}</abstract>
+    {{end}}
+
+    <subject>
+      <!-- Instead of taking only the first subject value, output 
+           each one as a topic element between the subject tags. -->
+      {{range index . "http://purl.org/dc/elements/1.1/subject"}}
+      <topic>{{.}}</topic>
+      {{end}}
+    </subject>
+
+  </mods>
+
+  {{end}} <!-- of outer range $docId... loop -->
+
+</modsCollection>

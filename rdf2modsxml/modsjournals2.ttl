@@ -1,0 +1,54 @@
+# mappings described at https://wiki.duraspace.org/download/attachments/87460857/MODS-RDF-Mapping-Recommendations_SMIG_v1_2019-01.pdf?api=v2
+# I used them to map the data shown in the sample Journal article at https://www.loc.gov/standards/mods/userguide/examples.html#journal_article
+
+# Next step: 
+
+# - In the template test that I did, can I have templates that call templates? Then I could make everything more modular. Somewhat like SPARQL Web Pages. 
+
+# - Output the following as XML that validates as shown in the modsjournal.xml header.
+
+# - Copy all the triples below so that it's about two documents and have the template output a <modsCollection><mods></mods><mods></mods></modsCollection> document, which I know will validate. 
+
+@prefix dce:         <http://purl.org/dc/elements/1.1/> . 
+@prefix dcterms:     <http://purl.org/dc/terms/> . 
+@prefix edm:         <http://www.europeana.eu/schemas/edm/> . 
+# Note about the following: final / wasn't there in PDF
+@prefix identifiers: <http://id.loc.gov/vocabulary/identifiers/> . 
+@prefix rdau:        <http://rdaregistry.info/Elements/u/#> . 
+@prefix rdfs:        <https://www.w3.org/TR/rdf-schema/> . 
+@prefix relators:    <http://id.loc.gov/vocabulary/relators/> . 
+@prefix schema:      <http://schema.org/> . 
+
+<https://example.org/objects/1> dcterms:title "Hiring and recruitment practices in academic libraries" .
+<https://example.org/objects/1> relators:aut "Raschke, Gregory K." . 
+<https://example.org/objects/1> dcterms:type <http://id.loc.gov/vocabulary/resourceTypes/txt> . 
+<https://example.org/objects/1> edm:hasType <http://id.loc.gov/vocabulary/marcgt/jou> . 
+<https://example.org/objects/1> relators:pup "Baltimore, Md." ; 
+                                    relators:pbl "Johns Hopkins University Press";
+                                    dcterms:issued "2003" .
+<https://example.org/objects/1> dcterms:language <http://id.loc.gov/vocabulary/iso639-2/eng>  .
+<https://example.org/objects/1> edm:hasType "print" ; 
+                                              rdau:extent.en "15 p." . 
+  <https://example.org/objects/1> dcterms:abstract "Academic libraries need to change their recruiting and hiring procedures to stay competitive in today's changing marketplace. By taking too long to find and to hire talented professionals in a tight labor market, academic libraries are losing out on top candidates and limiting their ability to become innovative and dynamic organizations. Traditional, deliberate, and risk-averse hiring models lead to positions remaining open for long periods, opportunities lost as top prospects find other positions, and a reduction in the overall talent level of the organization. To be more competitive and effective in their recruitment and hiring processes, academic libraries must foster manageable internal solutions, look to other professions for effective hiring techniques and models, and employ innovative concepts from modern personnel management literature." . 
+<https://example.org/objects/1> dce:subject "College librarians--Recruiting" ;  
+               dce:coverage "United States" . 
+<https://example.org/objects/1> dce:subject "College librarians--United States" ;  
+               dce:coverage "United States" . 
+
+########### beginning of second journal #######################
+
+<https://example.org/objects/2> dcterms:title "SECOND Hiring and recruitment practices in academic libraries" .
+<https://example.org/objects/2> relators:aut "SECOND Raschke, Gregory K." . 
+<https://example.org/objects/2> dcterms:type <http://id.loc.gov/vocabulary/resourceTypes/txt> . 
+<https://example.org/objects/2> edm:hasType <http://id.loc.gov/vocabulary/marcgt/jou> . 
+<https://example.org/objects/2> relators:pup "SECOND Baltimore, Md." ; 
+                                    relators:pbl "SECOND Johns Hopkins University Press";
+                                    dcterms:issued "SECOND 2003" .
+<https://example.org/objects/2> dcterms:language <http://id.loc.gov/vocabulary/iso639-2/eng>  .
+<https://example.org/objects/2> edm:hasType "SECOND print" ; 
+                                              rdau:extent.en "SECOND 15 p." . 
+  <https://example.org/objects/2> dcterms:abstract "SECOND Academic libraries need to change their recruiting and hiring procedures to stay competitive in today's changing marketplace. By taking too long to find and to hire talented professionals in a tight labor market, academic libraries are losing out on top candidates and limiting their ability to become innovative and dynamic organizations. Traditional, deliberate, and risk-averse hiring models lead to positions remaining open for long periods, opportunities lost as top prospects find other positions, and a reduction in the overall talent level of the organization. To be more competitive and effective in their recruitment and hiring processes, academic libraries must foster manageable internal solutions, look to other professions for effective hiring techniques and models, and employ innovative concepts from modern personnel management literature." . 
+<https://example.org/objects/2> dce:subject "SECOND College librarians--Recruiting" ;  
+               dce:coverage "SECOND United States" . 
+<https://example.org/objects/2> dce:subject "SECOND College librarians--United States" ;  
+               dce:coverage "SECOND United States" . 
